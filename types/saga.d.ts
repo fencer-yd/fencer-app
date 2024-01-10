@@ -4,3 +4,14 @@ declare module "type/saga" {
     payload?: any;
   }
 }
+
+declare namespace Store {
+  interface HomeState {
+    loading: boolean;
+    number: number;
+  }
+
+  interface Instance {
+    home: HomeState;
+  }
+}

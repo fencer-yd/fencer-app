@@ -2,12 +2,7 @@ import { IAction } from "type/saga";
 
 import { Action } from "./type";
 
-interface IState {
-  loading: boolean;
-  number: number;
-}
-
-const initialState: IState = {
+const initialState: Store.HomeState = {
   loading: false,
   number: 0,
 };

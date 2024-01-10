@@ -7,7 +7,9 @@ import { increaseRequest } from "@/containers/home/action";
 export default function TabOneScreen() {
   const dispatch = useDispatch();
 
-  const { loading, number } = useSelector((store: any) => store.home);
+  const { loading, number } = useSelector<Store.Instance, Store.HomeState>(
+    (store) => store.home
+  );
 
   const handleOnPress = () => {
     dispatch(increaseRequest(number));

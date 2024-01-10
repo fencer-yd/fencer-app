@@ -23,13 +23,16 @@
       ],
       "expo-router"
     ],
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "experiments": {
       "tsconfigPaths": true,
       "typedRoutes": true
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fencer.yangd.fencerapp"
     },
     "extra": {
       "eas": {
