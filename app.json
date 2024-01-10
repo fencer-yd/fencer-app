@@ -2,10 +2,11 @@
   "expo": {
     "name": "fencer-app",
     "slug": "fencer-app",
+    "scheme": "fencer-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -19,13 +20,13 @@
             "flipper": true
           }
         }
-      ]
+      ],
+      "expo-router"
     ],
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "experiments": {
-      "tsconfigPaths": true
+      "tsconfigPaths": true,
+      "typedRoutes": true
     },
     "ios": {
       "supportsTablet": true
@@ -43,6 +44,8 @@
       "package": "com.fencer.yangd.fencerapp"
     },
     "web": {
+      "bundler": "metro",
+      "output": "static",
       "favicon": "./assets/favicon.png"
     }
   }
