@@ -1,4 +1,8 @@
 import {
+  Button as DefaultButton,
+  ButtonProps as DefaultButtonProps,
+} from "@rneui/themed";
+import {
   View as DefaultView,
   Text as DefaultText,
   useColorScheme,
@@ -13,6 +17,7 @@ interface Props {
 
 export type TextProps = Props & DefaultText["props"];
 export type ViewProps = Props & DefaultView["props"];
+export type ButtonProps = Props & DefaultButtonProps;
 
 export function useThemeColor(
   props: { light?: string; dark?: string },
@@ -43,4 +48,14 @@ export function View(props: ViewProps) {
   );
 
   return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
+}
+
+export function Button(props: ButtonProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const backgroundColor = useThemeColor(
+    { light: lightColor, dark: darkColor },
+    "background"
+  );
+
+  return <DefaultButton style={[{ backgroundColor }, style]} {...otherProps} />;
 }
